@@ -1,0 +1,56 @@
+/* Colores */
+.color-azul {
+	color: blue !important;
+}
+
+.color-verde {
+	color: green !important;
+}
+
+.color-naranja {
+	color: orange !important;
+}
+
+.color-rojo {
+	color: red !important;
+}
+
+.color-gris {
+	color: #7f7f7f !important;
+}
+
+/* Lista Menu */
+ul.list-menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	 overflow: hidden;
+	background-color: #333;
+}
+
+ul.list-menu li {
+	float: left;
+}
+
+ul.list-menu li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+ul.list-menu li a:hover {
+	border: 1px solid white;
+}
+
+/* Imágenes */
+div.img-container {
+	display: flex;
+	justify-content: center;
+}
+
+div.img-container img {
+	max-width: 100%;
+	height: auto;
+}

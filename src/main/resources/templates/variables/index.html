@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8" />
+<title>Curso de Spring Boot 5</title>
+</head>
+<body>
+	<h1>Request Parameters</h1>
+	<ul>
+		<li><a
+			th:href="@{/variables/string/}+'Pasando variables desde index'">Enviando
+				variables en la url</a></li>
+		<li><a
+			th:href="@{/variables/mix-vars/}+'Estamos enviando varias variables'+ @{/} + '1'">Enviando
+				variables mixeadas en la url</a></li>
+		<li><a
+			th:href="@{/params/mix-params-http(saludo='Estamos enviando varios parametros con http request', numero=4)}">Enviando
+				parámetros mixeados con http request</a></li>
+	</ul>
+</body>
+</html>

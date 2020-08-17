@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8" />
+<title>Curso de Spring Boot 5</title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<div th:if="${usuarios.isEmpty()}">No hay usuarios registrados</div>
+	<div th:if="${!usuarios.isEmpty()}">
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="usuario: ${usuarios}">
+					<td th:text="${usuario.nombre}"></td>
+					<td th:text="${usuario.apellido}"></td>
+					<td th:text="${usuario.email}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<h1>Lista de Usuarios (Usando Model Atributte)</h1>
+	<div th:if="${usuariosModel.isEmpty()}">No hay usuarios
+		registrados</div>
+	<div th:if="${!usuariosModel.isEmpty()}">
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="usuario: ${usuariosModel}">
+					<td th:text="${usuario.nombre}"></td>
+					<td th:text="${usuario.apellido}"></td>
+					<td th:text="${usuario.email}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

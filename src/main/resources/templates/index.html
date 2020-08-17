@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8" />
+<title>Curso de Spring Boot 5</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+	<div>
+		<ul class="list-menu">
+			<li><a th:href="@{/app/inicio}">Inicio</a></li>
+			<li><a th:href="@{/nosotros}">Nosotros</a></li>
+			<li><a th:href="@{/contactenos}">Contáctenos</a></li>
+			<li><a th:href="@{/usuario/perfil}">Usuario Perfil</a></li>
+			<li><a th:href="@{/usuario/listar}">Lista de Usuarios</a></li>
+		</ul>
+	</div>
+	<h1 class="color-rojo" th:if="${titulo}" th:text="${titulo}"></h1>
+	<h1 class="color-verde" th:if="${titulo1}" th:text="${titulo1}"></h1>
+	<h1 class="color-naranja" th:if="${titulo2}" th:text="${titulo2}"></h1>
+	<h2 class="color-azul">Recursos y estilos estáticos</h2>
+	<div class="img-container">
+		<img th:src="@{/assets/images/background.png}" />
+	</div>
+	<h2 class="color-gris" th:if="${mensaje1}" th:text="${mensaje1}"></h2>
+</body>
+</html>
